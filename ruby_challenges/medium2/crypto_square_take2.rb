@@ -63,7 +63,7 @@ class Crypto
   end
 end
 
-crypto = Crypto.new('If man was meant to stay on the ground god would have given us roots')
+crypto = Crypto.new('Madness, and then illumination.')
 p crypto.normalize_plaintext
 p crypto.size
 p crypto.plaintext_segments

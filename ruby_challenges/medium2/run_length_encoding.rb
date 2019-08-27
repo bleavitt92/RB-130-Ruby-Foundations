@@ -40,5 +40,5 @@ class RunLengthEncoding
   end
 end
 
-p RunLengthEncoding.decode("2A3B4C")
+p RunLengthEncoding.encode('WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB')
 

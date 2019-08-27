@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative 'bowling'
+require_relative 'bowling.2'
 require 'pry'
 class GameTest < Minitest::Test
   def setup
@@ -14,14 +14,11 @@ class GameTest < Minitest::Test
   end
 
   def test_should_be_able_to_score_multiple_frames
-    skip
+    
     [3, 4, 2, 3, 5, 2].each do |pins|
       @game.roll pins
     end
-    # roll_n_times(14, 0)
-    14.times do
-      @game.roll(0)
-    end
+    roll_n_times(14, 0)
     assert_equal 19, @game.score
   end
 

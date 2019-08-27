@@ -1,4 +1,5 @@
 require 'pry'
+
 class Game
   @@num_rolls = 0
   @@current_frame = 0
@@ -25,7 +26,9 @@ class Game
         break
       end
 
-      if frame[0] == 10
+      if index == 9
+        total += frame.sum
+      elsif frame[0] == 10
         total += 10
         total += frames[index+1][0] + frames[index+1][1]
       elsif frame.sum == 10
@@ -63,6 +66,6 @@ def roll_n_times(rolls, pins)
     Array(pins).each { |value| @game.roll(value) }
   end
 end
-p roll_n_times(20, 0)
+roll_n_times(10, 10)
 p @game.frames
- @game.score
+p @game.score
